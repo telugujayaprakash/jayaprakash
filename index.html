@@ -1,13 +1,42 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jp</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jp</title>
+  <style>
+    /* Set the minimum width for the desktop view */
+    #lock{
+      display: none;
+    }
+    @media only screen and (min-width: 768px) {
+
+      /* Enable the contents for desktop view */
+      #root{
+        display: block;
+      }
+    }
+
+    /* Set the maximum width for the mobile view */
+    @media only screen and (max-width: 767px) {
+
+      /* Disable the contents for mobile view */
+      #lock {
+        display: block;
+      }
+      #root{
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="lock">plz use your laptop to see the webpage or else enable desktop site</div>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>

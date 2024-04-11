@@ -4,7 +4,10 @@ import './components.css';
 function myprojects() {
         return (
             <div>
-                myprojects
+                <h2>My Projects</h2>
+                <div className="cards">
+                    <section></section>
+                </div>
             </div>
         );
     }
