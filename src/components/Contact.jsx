@@ -1,11 +1,67 @@
-import React from 'react';
+// import React from 'react';
+// import './components.css';
+// import cimg from '../images/contactgif.gif'
+
+// function contact() {
+//         return (
+//             <div className='cc'>
+//                 <center>
+//                     <img src={cimg} alt=""  height='250px'/>
+//                     <form action="">
+//                         <input type="text" name="name" id="name" placeholder='Enter Your Name' required/>
+//                         <input type="email" name='email' placeholder='Enter your Email id' required/>
+//                         <textarea name="" id="" cols="30" rows="10" placeholder='Enter Your message here'></textarea>
+//                         <button type="submit">Send</button>
+//                     </form>
+
+//                 </center>
+//             </div>
+//         );
+//     }
+// export default contact;
+
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import './components.css';
+import cimg from '../images/contactgif.gif'
 
 function contact() {
-        return (
-            <div>
-                contact
-            </div>
-        );
-    }
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm('service_ncooh4w', 'template_21xty0p', form.current, {
+                publicKey: 'RZkl3DePKJf33q6qq',
+            })
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                },
+            );
+    };
+
+    return (
+        <>
+        <div className="cc">
+            <center>
+                <img src={cimg} alt="" height='250px' />
+                <form ref={form} onSubmit={sendEmail}>
+                    <label>Name</label>
+                    <input type="text" name="user_name" /> <br />
+                    <label>Email</label>
+                    <input type="email" name="user_email" /> <br />
+                    <label>Message</label>
+                    <textarea name="message" /><br />
+                    <input type="submit" value="Send" />
+                </form>
+            </center>
+        </div>
+        </>
+    );
+};
 export default contact;
