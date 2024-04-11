@@ -38,6 +38,7 @@ function contact() {
             .then(
                 () => {
                     console.log('SUCCESS!');
+                    alert("Message sent successfully")
                 },
                 (error) => {
                     console.log('FAILED...', error.text);
@@ -51,13 +52,10 @@ function contact() {
             <center>
                 <img src={cimg} alt="" height='250px' />
                 <form ref={form} onSubmit={sendEmail}>
-                    <label>Name</label>
-                    <input type="text" name="user_name" /> <br />
-                    <label>Email</label>
-                    <input type="email" name="user_email" /> <br />
-                    <label>Message</label>
-                    <textarea name="message" /><br />
-                    <input type="submit" value="Send" />
+                    <input type="text" name="user_name"  placeholder='Enter your name' required/> <br/>
+                    <input type="email" name="user_email" required placeholder='Enter your Email'/><br/>
+                    <textarea name="message" required placeholder='Enter your message here!'/><br />
+                    <button type="submit" value="Send">Send</button>
                 </form>
             </center>
         </div>
