@@ -1,14 +1,58 @@
 import React from 'react';
 import './components.css';
+import test from '../images/csscards.jpg'
 
 function myprojects() {
-        return (
-            <div>
-                <h2>My Projects</h2>
-                <div className="cards">
-                    <section></section>
+    return (
+        <>
+            <h1 className='mpro'>My Projects</h1>
+                <div className='myproj'>
+                    <div class="card">
+                        <div class="overlay">
+                            <div class="text">
+                                <h2>Project Title</h2>
+                                <p>Project Description</p>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <img src={test} alt="Project Image" />
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="overlay">
+                            <div class="text">
+                                <h2>Project Title</h2>
+                                <p>Project Description</p>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <img src="image.jpg" alt="Project Image" />
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="overlay">
+                            <div class="text">
+                                <h2>Project Title</h2>
+                                <p>Project Description</p>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <img src="image.jpg" alt="Project Image" />
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="overlay">
+                            <div class="text">
+                                <h2>Project Title</h2>
+                                <p>Project Description</p>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <img src="image.jpg" alt="Project Image" />
+                        </div>
+                    </div>
                 </div>
-            </div>
-        );
-    }
+        </>
+    );
+}
 export default myprojects;

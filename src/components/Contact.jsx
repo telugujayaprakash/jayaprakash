@@ -25,9 +25,9 @@ import emailjs from '@emailjs/browser';
 import './components.css';
 import cimg from '../images/contactgif.gif'
 
+
 function contact() {
     const form = useRef();
-
     const sendEmail = (e) => {
         e.preventDefault();
 

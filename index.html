@@ -3,18 +3,19 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="icon" type="image/svg+xml" href="./src/images/icon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jp</title>
   <style>
     /* Set the minimum width for the desktop view */
-    #lock{
+    #lock {
       display: none;
     }
+
     @media only screen and (min-width: 768px) {
 
       /* Enable the contents for desktop view */
-      #root{
+      #root {
         display: block;
       }
     }
@@ -24,9 +25,13 @@
 
       /* Disable the contents for mobile view */
       #lock {
+        text-align: center;
         display: block;
+        color: red;
+
       }
-      #root{
+
+      #root {
         display: none;
       }
     }
@@ -34,7 +39,7 @@
 </head>
 
 <body>
-  <div id="lock">plz use your laptop to see the webpage or else enable desktop site</div>
+  <div id="lock"><h2>plz use your laptop to see the webpage or else enable desktop site</h2></div>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>

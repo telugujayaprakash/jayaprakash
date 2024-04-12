@@ -15,12 +15,14 @@ function App() {
       <BrowserRouter>
         <div className="box">
           <Navbar />
+          <div>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
             <Route path='/contact' element={<Contact />} />
             <Route path='/myproj' element={<Myproj />} />
           </Routes>
+          </div>
         </div>
       </BrowserRouter>
     </>
