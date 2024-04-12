@@ -9,10 +9,10 @@ function Navbar() {
                 <h3 className="img">JP</h3>
                 <nav>
                     <ul className="link">
-                        <li><Link to="/" className="i">Home</Link></li>
-                        <li><Link to="/about" className="i">about</Link></li>
-                        <li><Link to="/myproj" className="i">myproj</Link></li>
-                        <li><Link to="/contact" className="i">contact </Link></li>
+                        <li className="i"><Link to="/">Home</Link></li>
+                        <li className="i"><Link to="/about" >about</Link></li>
+                        <li className="i"><Link to="/myproj" >myproj</Link></li>
+                        <li className="i"><Link to="/contact">contact </Link></li>
                     </ul>
                 </nav>
             </div>
