@@ -1,10 +1,11 @@
 import React from 'react';
 import './components.css';
+import 'animate.css';
 
 function about() {
     return (
         <div className='aa'>
-            <h1 className='a1'>About Me</h1>
+            <h1 className='a1' >About Me</h1>
             <p className='ap'>Welcome to my portfolio! I'm Jayaprakash, a dynamic and passionate Frontend Web Developer with a zest for creating unique and innovative designs. I'm a quick learner who's always eager to expand my skillset and stay ahead of the curve in this ever-evolving field.</p>
 <hr />
             <section className='askills'>

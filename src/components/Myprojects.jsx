@@ -1,11 +1,12 @@
 import React from 'react';
 import './components.css';
+import 'animate.css';
 import test from '../images/csscards.jpg'
 
 function myprojects() {
     return (
         <>
-            <h1 className='mpro'>My Projects</h1>
+            <h1 className='mpro animate__animated animate__pulse'>My Projects</h1>
                 <div className='myproj'>
                     <div class="card">
                         <div class="overlay">

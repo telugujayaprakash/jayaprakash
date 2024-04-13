@@ -104,12 +104,22 @@ li:hover {
     line-height: 60px;
     margin-left: 100%;
 }
+.msg{
+    width: 300px;
+}
 input{
     padding: 10px;
     border-radius: 20px;
     width: 300px;
 }
-
+.send{
+    padding: 10px;
+    width: 100px;
+    border-radius: 25px;
+}
+.send:hover{
+    background: greenyellow;
+}
 /* myprojects page  */
 .mpro{
     font-size: 80px;
@@ -165,4 +175,5 @@ input{
     text-align: center;
     color: #333;
 }
+
 
