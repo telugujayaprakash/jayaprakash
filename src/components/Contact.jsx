@@ -1,14 +1,15 @@
-import React, { useRef } from 'react';
+import React, { useRef} from 'react';
 import emailjs from '@emailjs/browser';
+import {useState } from 'react';
 import './components.css';
-import cimg from '../images/contactgif.gif'
-
-
+import cimg from '../images/contactgif.gif';
 function contact() {
     const form = useRef();
+    const [sent,useSent]=useState("Submit")
+    const [color, setColor] = useState('white');
     const sendEmail = (e) => {
         e.preventDefault();
-
+        useSent("Loading...")
         emailjs
             .sendForm('service_ncooh4w', 'template_21xty0p', form.current, {
                 publicKey: 'RZkl3DePKJf33q6qq',
@@ -16,10 +17,13 @@ function contact() {
             .then(
                 () => {
                     console.log('SUCCESS!');
-                    alert("Message sent successfully")
+                    useSent('sent')
+                    setColor('green')
                 },
                 (error) => {
+                    useSent('Failed')
                     console.log('FAILED...', error.text);
+                    setColor('red')
                 },
             );
     };
@@ -33,7 +37,7 @@ function contact() {
                     <input type="text" name="user_name"  placeholder='Enter your name' required/> <br/>
                     <input type="email" name="user_email" required placeholder='Enter your Email'/><br/>
                     <textarea name="message" className='msg' required placeholder='Enter your message here!'/><br />
-                    <button type="submit" value="Send" className='send'>Send</button>
+                    <button type="submit" value="Send" className='send' style={{ backgroundColor: color }}>{sent}</button>
                 </form>
             </center>
         </div>
