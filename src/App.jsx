@@ -25,6 +25,7 @@ function App() {
           </Routes>
           </div>
         </div>
+        <Analytics />
       </BrowserRouter>
     </>
   )
